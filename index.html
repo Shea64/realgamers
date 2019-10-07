@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Real Gamers</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play:700&display=swap" rel="stylesheet">
+
+
+  </head>
+
+
+  <body>
+
+  <div class="container-fluid">
+    <form method="post" action="#" id="genderform" name="genderform">
+
+      <div class="row pr-2 pl-2">
+          <div class="col-md header">
+            <h1>The Real Gamers</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md text-center">
+            <h2>Gender</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md text-center">
+            <h4>What % of the gamer population do you think are...</h4>
+            <span id="total"></span>
+          </div>
+        </div>
+        <!-- text inputs -->
+        <div class="row">
+          <div class="col-md-6 text-center subhead">
+            <h4>Female</h4>
+              <input type="text" id="female" />
+          </div>
+          <div class="col-md-6 text-center subhead">
+            <h4>Male</h4>
+              <input type="text" id="male" />
+          </div>
+        </div>
+
+        <!-- text inputs end -->
+        <div class="row">
+          <div class="col-md text-center">
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+
+        <br>
+
+
+        <div class="row align-items-end">
+          <div class="col-md spread" id="yourgender">
+              <p>
+                Your Gender %
+              </p>
+            <div class="title d-flex justify-content-center align-items-end">
+
+             <div class="group">
+              <div id="femalebar" class="bars"></div>
+             <div id="femaletext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="malebar" class="bars"></div>
+             <div id="maletext" class="text"></div><br />
+            </div>
+          </div>
+          </div>
+
+          <div class="col-md spread" id="studygender">
+            <p>
+                Studied Gender %
+              </p>
+            <div class="title d-flex justify-content-center align-items-end">
+            <div class="group">
+              <div id="realFemalebar" class="bars"></div>
+             <div id="realFemaletext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="realMalebar" class="bars"></div>
+             <div id="realMaletext" class="text"></div><br />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </form>
+
+
+  <!-- ethnicity form-->
+     <hr />
+
+    <form method="post" action="#" id="ethnicityform" name="ethnicityform">
+
+        <div class="row">
+          <div class="col-md text-center">
+            <h2>Ethnicity</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md text-center">
+            <h4>What % of each population below do you think actively plays games?</h4>
+            <span id="ethnicityTotal"></span>
+          </div>
+        </div>
+        <!-- text inputs -->
+        <div class="row">
+          <div class="col-md-6 text-center subhead">
+            <h4>Hispanic</h4>
+              <input type="text" id="hispanic" />
+          </div>
+          <div class="col-md-6 text-center">
+            <h4>African-American</h4>
+              <input type="text" id="african" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 text-center subhead">
+            <h4>Asian-American</h4>
+              <input type="text" id="asian" />
+          </div>
+          <div class="col-md-6 text-center subhead">
+            <h4>White</h4>
+              <input type="text" id="white" />
+          </div>
+        </div>
+        <!-- text inputs end -->
+        <div class="row">
+          <div class="col-md text-center">
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row spread" id="yourethnicity">
+          <div class="col-md">
+            <p>
+            Your % of gamers in each population.
+          </p>
+          </div>
+      </div>
+        <div class="row">
+          <div class="col-md d-flex align-items-end end">
+            <div class="group">
+              <div id="hispanicbar" class="bars"></div>
+             <div id="hispanictext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="asianbar" class="bars"></div>
+             <div id="asiantext" class="text"></div><br />
+            </div>
+          </div>
+          <div class="col-md d-flex align-items-end start">
+            <div class="group">
+              <div id="africanbar" class="bars"></div>
+             <div id="africantext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="whitebar" class="bars"></div>
+             <div id="whitetext" class="text"></div><br />
+            </div>
+          </div>
+        </div>
+
+      <div class="row spread" id="studyethnicity">
+        <div class="col-md">
+          <p>
+            Studied % of gamers in each population.
+          </p>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-md d-flex align-items-end end">
+
+            <div class="group">
+              <div id="realHispanicbar" class="bars"></div>
+             <div id="realHispanictext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="realAsianbar" class="bars"></div>
+             <div id="realAsiantext" class="text"></div><br />
+            </div>
+          </div>
+          <div class="col-md d-flex align-items-end start">
+            <div class="group">
+              <div id="realAfricanbar" class="bars"></div>
+             <div id="realAfricantext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="realWhitebar" class="bars"></div>
+             <div id="realWhitetext" class="text"></div><br />
+            </div>
+          </div>
+        </div>
+
+    </form>
+
+
+    <!-- sexuality form-->
+  <div id = "sexualityhidden">
+    <hr />
+
+    <form method="post" action="#" id="sexualityform" name="ageform">
+
+        <div class="row">
+          <div class="col-md text-center">
+            <h2>Sexuality</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md text-center">
+            <h4>What % of each population below do you think actively plays games?</h4>
+            <span id="sexualityTotal"></span>
+          </div>
+        </div>
+        <!-- text inputs -->
+        <div class="row">
+          <div class="col-md-6 text-center subhead">
+            <h4>Heterosexual</h4>
+              <input type="text" id="hetero" />
+          </div>
+          <div class="col-md-6 text-center subhead">
+            <h4>Homosexual/Bisexual</h4>
+              <input type="text" id="lgbt" />
+          </div>
+        </div>
+
+        <!-- text inputs end -->
+        <div class="row">
+          <div class="col-md text-center">
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <div class="col-md spread" id="yoursexuality">
+            <p>
+                Your % of gamers in each population.
+              </p>
+            <div class="title d-flex justify-content-center align-items-end">
+            <div class="group">
+              <div id="heterobar" class="bars"></div>
+             <div id="heterotext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="lgbtbar" class="bars"></div>
+             <div id="lgbttext" class="text"></div><br />
+            </div>
+          </div>
+          </div>
+
+          <div class="col-md spread" id="studysexuality">
+            <p>
+                Studied % of gamers in each population.
+              </p>
+            <div class="title d-flex justify-content-center align-items-end">
+            <div class="group">
+              <div id="realHeterobar" class="bars"></div>
+             <div id="realHeterotext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="realLGBTbar" class="bars"></div>
+             <div id="realLGBTtext" class="text"></div><br />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+
+    <!-- age form-->
+  <div id = "agehidden">
+    <hr />
+
+    <form method="post" action="#" id="ageform" name="ageform">
+
+        <div class="row">
+          <div class="col-md text-center">
+            <h2>Age</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md text-center">
+            <h4>What % of the gamer population do you think are...</h4>
+            <span id="ageTotal"></span>
+          </div>
+        </div>
+        <!-- text inputs -->
+        <div class="row">
+          <div class="col-md-4 text-center subhead">
+            <h4>18-35</h4>
+              <input type="text" id="young" />
+          </div>
+          <div class="col-md-4 text-center subhead">
+            <h4>36-49</h4>
+              <input type="text" id="mid" />
+          </div>
+          <div class="col-md-4 text-center subhead">
+            <h4>50+</h4>
+              <input type="text" id="old" />
+          </div>
+        </div>
+
+        <!-- text inputs end -->
+        <div class="row">
+          <div class="col-md text-center">
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+
+        <br>
+
+       <div class="row spread" id="yourage">
+         <p>
+           Your % of gamers that are 18-35, 36-49, and 50+.
+         </p>
+        </div>
+        <div class="row age">
+          <div class="col-md d-flex align-items-end justify-content-center">
+            <div class="group">
+              <div id="youngbar" class="bars"></div>
+             <div id="youngtext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="midbar" class="bars"></div>
+             <div id="midtext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="oldbar" class="bars"></div>
+             <div id="oldtext" class="text"></div><br />
+            </div>
+          </div>
+      </div>
+
+        <div class="row spread" id="studyage">
+         <p>
+           Studied % of gamers that are 18-35, 36-49, and 50+.
+         </p>
+        </div>
+        <div class="row age">
+          <div class="col-md d-flex align-items-end justify-content-center">
+            <div class="group">
+              <div id="realYoungbar" class="bars"></div>
+             <div id="realYoungtext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="realMidbar" class="bars"></div>
+             <div id="realMidtext" class="text"></div><br />
+            </div>
+            <div class="group">
+              <div id="realOldbar" class="bars"></div>
+             <div id="realOldtext" class="text"></div><br />
+            </div>
+          </div>
+        </div>
+
+
+    </form>
+    </div>
+
+    <div class="row" id="research">
+      <div class="col-md">
+        <p>Research for gaming proportions in ethnicity and sexuality populations from <a href="https://www.nielsen.com/us/en/insights/article/2015/how-diverse-are-video-gamers-and-the-characters-they-play/" target="_blank">Nielsen</a>.</p>
+        <p>Research for gender and age proportions in gamer population from <a href="https://techjury.net/stats-about/video-game-demographics/" target="_blank">techjury</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+    <script type="text/javascript">
+
+      //everything is within this onsubmit function. Executes on form submit
+       document.getElementById("genderform").onsubmit=function() {
+
+         //these lines get the value from the form and put it in a variable. the || indicates a 0 if empty.
+           male = parseFloat(document.getElementById('male').value) || 0;
+           female = parseFloat(document.getElementById('female').value) || 0
+           realMale = 55;
+           realFemale = 45;
+
+           if (male > 100 || female > 100) {
+            document.getElementById("total").innerHTML = "Please enter numbers under 100.";
+
+            }/*(typeof male == 'string') {
+             document.getElementById("total").innerHTML = "Please enter numbers.";
+           }*/
+
+           else if (male + female > 100) {
+             document.getElementById("total").innerHTML = "Percentages entered exeed 100.";
+           }
+
+
+
+
+             // end if
+
+            else {
+              console.log(typeof male);
+              document.getElementById("female").disabled = true;
+              document.getElementById("male").disabled = true;
+
+              document.getElementById("yourgender").style.display = "block";
+              document.getElementById("studygender").style.display = "block";
+              document.getElementById("ethnicityform").style.display = "block";
+
+              document.getElementById("total").innerHTML = ""
+            //JSON array of objects that hold data for chart
+               genders = [{name: "male", val: male, color: "#1e7aab", label: "Male"},
+               {name: "realMale", val: realMale, color: "#1e7aab", label: "Male"},
+               {name: "female", val: female, color: "#d955a8", label: "Female"},
+               {name: "realFemale", val: realFemale, color: "#d955a8", label: "Female"}];
+
+
+               // loops through JSON to get width, name and color for each bar.
+                for(i = 0; i< genders.length; i++) {
+                document.getElementById(genders[i].name + "bar").style.height = genders[i].val*4 + "px";
+                document.getElementById(genders[i].name + "bar").style.backgroundColor = genders[i].color;
+                document.getElementById(genders[i].name + "bar").innerHTML = genders[i].val + "%";
+                document.getElementById(genders[i].name + "text").innerHTML = genders[i].label;
+
+             }//end for
+             }  //end else
+          return false;
+
+       } // end function
+
+      //everything is within this onsubmit function. Executes on form submit
+     document.getElementById("ethnicityform").onsubmit=function() {
+
+       //these lines get the value from the form and put it in a variable. the || indicates a 0 if empty.
+         asian = parseFloat(document.getElementById('asian').value) || 0;
+         african = parseFloat(document.getElementById('african').value) || 0;
+         hispanic = parseFloat(document.getElementById('hispanic').value) || 0;
+         white = parseFloat(document.getElementById('white').value) || 0;
+         realAsian = 81;
+         realAfrican = 71;
+         realHispanic = 55;
+         realWhite = 61;
+
+
+         if(asian > 100 || african > 100 || hispanic > 100 || white > 100) {
+          document.getElementById("ethnicityTotal").innerHTML = "Please enter numbers under 100."
+          }
+
+           // end if
+
+          else {
+            document.getElementById("asian").disabled = true;
+            document.getElementById("hispanic").disabled = true;
+            document.getElementById("african").disabled = true;
+            document.getElementById("white").disabled = true;
+
+            document.getElementById("sexualityhidden").style.display = "block";
+            document.getElementById("yourethnicity").style.display = "block";
+            document.getElementById("studyethnicity").style.display = "block";
+
+            document.getElementById("ethnicityTotal").innerHTML = ""
+          //JSON array of objects that hold data for chart
+             ethnicities = [{name: "asian", val: asian, color: "#db613d", label: "Asian-American"},
+             {name: "realAsian", val: realAsian, color: "#db613d", label: "Asian-American"},
+             {name: "african", val: african, color: "#f2cf70", label: "African-American"},
+             {name: "realAfrican", val: realAfrican, color: "#f2cf70", label: "African-American"},
+             {name: "hispanic", val: hispanic, color: "#ca2941", label: "Hispanic"},
+             {name: "realHispanic", val: realHispanic, color: "#ca2941", label: "Hispanic"},
+             {name: "white", val: white, color: "#528b4a", label: "White"},
+             {name: "realWhite", val: realWhite, color: "#528b4a", label: "White"}];
+
+
+             // loops through JSON to get width, name and color for each bar.
+              for(i = 0; i< ethnicities.length; i++) {
+              document.getElementById(ethnicities[i].name + "bar").style.height = ethnicities[i].val*4 + "px";
+              document.getElementById(ethnicities[i].name + "bar").style.backgroundColor = ethnicities[i].color;
+              document.getElementById(ethnicities[i].name + "bar").innerHTML = ethnicities[i].val + "%";
+              document.getElementById(ethnicities[i].name + "text").innerHTML = ethnicities[i].label;
+
+           }//end for
+           }  //end else
+        return false;
+
+     } // end function
+
+      document.getElementById("sexualityform").onsubmit=function() {
+
+         //these lines get the value from the form and put it in a variable. the || indicates a 0 if empty.
+           hetero = parseFloat(document.getElementById('hetero').value) || 0;
+           lgbt = parseFloat(document.getElementById('lgbt').value) || 0;
+           realHetero = 63;
+           realLGBT = 65;
+
+
+           if(hetero > 100 || lgbt > 100) {
+            document.getElementById("sexualityTotal").innerHTML = "Please enter numbers under 100."
+
+            }
+             // end if
+
+            else {
+              document.getElementById("hetero").disabled = true;
+              document.getElementById("lgbt").disabled = true;
+
+              document.getElementById("yoursexuality").style.display = "block";
+              document.getElementById("studysexuality").style.display = "block";
+              document.getElementById("agehidden").style.display = "block";
+
+              document.getElementById("sexualityTotal").innerHTML = ""
+            //JSON array of objects that hold data for chart
+               sexualities = [{name: "hetero", val: hetero, color: "#1e7aab", label: "Heterosexual"},
+               {name: "realHetero", val: realHetero, color: "#1e7aab", label: "Heterosexual"},
+               {name: "lgbt", val: lgbt, color: "#d955a8", label: "Homosexual/ Bisexual"},
+               {name: "realLGBT", val: realLGBT, color: "#d955a8", label: "Homosexual/ Bisexual"}];
+
+
+               // loops through JSON to get width, name and color for each bar.
+                for(i = 0; i< sexualities.length; i++) {
+                document.getElementById(sexualities[i].name + "bar").style.height = sexualities[i].val*4 + "px";
+                document.getElementById(sexualities[i].name + "bar").style.backgroundColor = sexualities[i].color;
+                document.getElementById(sexualities[i].name + "bar").innerHTML = sexualities[i].val + "%";
+                document.getElementById(sexualities[i].name + "text").innerHTML = sexualities[i].label;
+
+             }//end for
+             }  //end else
+          return false;
+
+       } // end function
+
+      document.getElementById("ageform").onsubmit=function() {
+
+         //these lines get the value from the form and put it in a variable. the || indicates a 0 if empty.
+           young = parseFloat(document.getElementById('young').value) || 0;
+           mid = parseFloat(document.getElementById('mid').value) || 0;
+           old = parseFloat(document.getElementById('old').value) || 0;
+           realYoung = 29;
+           realMid = 20;
+           realOld = 23;
+
+
+           if(young > 100 || mid > 100 || old > 100) {
+            document.getElementById("ageTotal").innerHTML = "Please enter numbers under 100."
+
+            }
+           else if (young + mid + old > 100) {
+             document.getElementById("ageTotal").innerHTML = "Percentages entered exeed 100."
+           }
+             // end if
+
+            else {
+              document.getElementById("young").disabled = true;
+              document.getElementById("mid").disabled = true;
+              document.getElementById("old").disabled = true;
+
+              document.getElementById("yourage").style.display = "block";
+              document.getElementById("studyage").style.display = "block";
+              document.getElementById("research").style.display = "block";
+
+              document.getElementById("ageTotal").innerHTML = ""
+            //JSON array of objects that hold data for chart
+               ages = [{name: "young", val: young, color: "#1d6a99", label: " 18-35"},
+               {name: "realYoung", val: realYoung, color: "#1d6a99", label: "18-35"},
+               {name: "mid", val: mid, color: "#504a8d", label: "36-49"},
+               {name: "realMid", val: realMid, color: "#504a8d", label: "36-49"},
+               {name: "old", val: old, color: "#8a2683", label: "50+"},
+               {name: "realOld", val: realOld, color: "#8a2683", label: "50+"}];
+
+
+               // loops through JSON to get width, name and color for each bar.
+                for(i = 0; i< ages.length; i++) {
+                document.getElementById(ages[i].name + "bar").style.height = ages[i].val*4 + "px";
+                document.getElementById(ages[i].name + "bar").style.backgroundColor = ages[i].color;
+                document.getElementById(ages[i].name + "bar").innerHTML = ages[i].val + "%";
+                document.getElementById(ages[i].name + "text").innerHTML = ages[i].label;
+
+             }//end for
+             }  //end else
+          return false;
+
+       } // end function
+
+
+    </script>
+
+
+
+        <!-- Bootstrap JavaScript. JavaScript provides interactive functionality used for components like Bootstrap's Carousel.
+    These three lines should stay just before your </body> tag. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
